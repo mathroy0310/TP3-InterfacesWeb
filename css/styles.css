@@ -1,0 +1,34 @@
+
+/* Propriétés générales */
+
+* {box-sizing: border-box;}
+
+img {max-width: 100%;}
+
+.container {
+	width: 90%;
+	max-width: 1200px;
+	margin: 0 auto;
+	background-color: cornflowerblue;
+}
+
+header img{
+	height: 20rem;
+	width: 15rem;
+	margin-top: 2rem;
+	border: 0.1rem solid red;
+}
+.flex {
+	display: flex;
+	justify-content:space-between ;
+}
+nav ul{
+	display:flex;
+	list-style-type: none;
+	justify-content: right;
+}
+
+nav ul li{
+	padding: 2em;
+	font-size: larger;
+}
