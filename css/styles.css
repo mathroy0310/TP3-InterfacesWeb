@@ -9,7 +9,7 @@ img {max-width: 100%;}
 	width: 90%;
 	max-width: 1200px;
 	margin: 0 auto;
-	background-color: cornflowerblue;
+	background-color: rgb(191, 210, 247);
 }
 
 header img{
@@ -22,13 +22,104 @@ header img{
 	display: flex;
 	justify-content:space-between ;
 }
+nav{
+	margin-top: 2rem;
+	background-color: bisque;
+	width: 40rem;
+	height: 4rem;
+}
 nav ul{
 	display:flex;
 	list-style-type: none;
-	justify-content: right;
+	justify-content: space-around;
 }
 
 nav ul li{
-	padding: 2em;
 	font-size: larger;
+}
+span li a{
+	background-color: black;
+	color: white;
+
+}
+li a{
+	text-decoration: none;
+	font-size: larger;
+	padding: 0.5rem;
+	border:2px solid blue;
+	color: white;
+	border-radius: 10px;
+}
+li a:hover{
+	background-color: aqua;
+}
+section h1{
+	text-transform: uppercase;
+
+}
+figure img{
+	width: 15rem;
+	height: 15rem;
+}
+figcaption{
+	border: 2px solid red;
+	display:block;
+	width: 15rem;
+	height: 5rem;
+	text-align: center;
+}
+figure{
+	margin-block-start: 0;
+    margin-block-end: 0;
+    margin-inline-start: 0;
+    margin-inline-end: 0;
+}
+.BurgersPremiereLigne{
+	display:flex;
+	justify-content:center;
+	
+}
+.BurgersDeuxiemeLigne{
+	display: flex;
+	justify-content: center;
+	margin-top: 5rem;
+	padding-bottom: 3rem;
+}
+.beignesLigne{
+	display: flex;
+	justify-content: center;
+	padding-bottom: 6rem;
+}
+figcaption .btn{
+	padding: 0.5rem;
+	background-color: black;
+	color: white;
+}
+
+.tshirtBox{
+	background-color: grey;
+}
+.containerTshirt{
+	width: 90%;
+	max-width: 1200px;
+	margin: 0 auto;
+	content: "";
+	clear: both;
+	display: table;
+}
+.containerTshirt img{
+	border: 2px solid red;
+	float: right;
+}
+.containerTshirt p{
+	max-width: 30rem;
+}
+.textTshirt{
+	display: flex;
+	justify-content: space-between;
+}
+
+footer span{
+	text-align: center;
+	font-size: large;
 }
