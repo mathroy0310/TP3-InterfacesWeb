@@ -4,19 +4,34 @@
 * {box-sizing: border-box;}
 
 img {max-width: 100%;}
-
-.container {
-	width: 90%;
-	max-width: 1200px;
-	margin: 0 auto;
-	background-color: rgb(191, 210, 247);
+p{
+	font-family: Arial, Helvetica, sans-serif;
 }
-
+h1{
+	text-transform: uppercase;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.btn{
+	padding: 0.7rem;
+	background-color: blue;
+	color: whitesmoke;
+	text-decoration: none;
+	border-radius: 10px;
+	font-family:Verdana, Geneva, Tahoma, sans-serif
+}
+.container{
+	padding: 2rem;
+	border: black solid 2px;
+	max-width: 1200px;
+	width: 90%;
+	margin: 0 auto;
+	border-radius: 5px;
+	background-color: rgb(219, 241, 255);
+}
 header img{
-	height: 20rem;
-	width: 15rem;
+	height: 18rem;
+	width: 200px;
 	margin-top: 2rem;
-	border: 0.1rem solid red;
 }
 .flex {
 	display: flex;
@@ -24,9 +39,8 @@ header img{
 }
 nav{
 	margin-top: 2rem;
-	background-color: bisque;
-	width: 40rem;
-	height: 4rem;
+	width: 45rem;
+	height: 8rem;
 }
 nav ul{
 	display:flex;
@@ -38,7 +52,7 @@ nav ul li{
 	font-size: larger;
 }
 span li a{
-	background-color: black;
+	background-color: blue;
 	color: white;
 
 }
@@ -47,22 +61,21 @@ li a{
 	font-size: larger;
 	padding: 0.5rem;
 	border:2px solid blue;
-	color: white;
+	color: black;
 	border-radius: 10px;
 }
 li a:hover{
-	background-color: aqua;
+	background-color: rgb(230, 230, 230);
 }
-section h1{
-	text-transform: uppercase;
-
+span li a:hover{
+	background-color: darkblue;
 }
 figure img{
 	width: 15rem;
 	height: 15rem;
+	border-radius: 10px;
 }
 figcaption{
-	border: 2px solid red;
 	display:block;
 	width: 15rem;
 	height: 5rem;
@@ -90,30 +103,25 @@ figure{
 	justify-content: center;
 	padding-bottom: 6rem;
 }
-figcaption .btn{
-	padding: 0.5rem;
-	background-color: black;
-	color: white;
-}
-
 .tshirtBox{
 	background-color: grey;
 }
+.tshirtBox .container{
+	border: none;
+	background-color: grey;
+}
 .containerTshirt{
-	width: 90%;
-	max-width: 1200px;
-	margin: 0 auto;
 	content: "";
 	clear: both;
 	display: table;
 }
 .containerTshirt img{
-	border: 2px solid red;
 	float: right;
 }
 .containerTshirt p{
 	max-width: 30rem;
 }
+
 .textTshirt{
 	display: flex;
 	justify-content: space-between;
@@ -122,4 +130,31 @@ figcaption .btn{
 footer span{
 	text-align: center;
 	font-size: large;
+}
+
+.containerFooter{
+	padding: 2.5rem;
+	color: white;
+	font-size: 24px;
+	display: flex;
+	justify-content: space-between;
+	max-width: 1200px;
+	margin: 0 auto;
+}
+.footerinfo{
+	background-color: rgb(52, 52, 52);
+}
+footer .btn{
+	background-color: white;
+	padding-right: 0.5rem;
+	padding-left: 0.5rem;
+	color: black;
+	text-decoration: none;
+
+}
+.btn:hover{
+	background-color: darkblue;
+}
+footer .btn:hover{
+	background-color: cornsilk;
 }
