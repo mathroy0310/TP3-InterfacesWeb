@@ -12,11 +12,12 @@ h1{
 	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 .btn{
-	padding: 0.7rem;
+	padding: 0.5rem;
 	background-color: blue;
 	color: whitesmoke;
 	text-decoration: none;
 	border-radius: 10px;
+	border:2px solid blue;
 	font-family:Verdana, Geneva, Tahoma, sans-serif
 }
 .container{
@@ -65,7 +66,8 @@ li a{
 	border-radius: 10px;
 }
 li a:hover{
-	background-color: rgb(230, 230, 230);
+	background-color: rgb(255, 255, 255);
+	border-color: black;
 }
 span li a:hover{
 	background-color: darkblue;
@@ -154,7 +156,36 @@ footer .btn{
 }
 .btn:hover{
 	background-color: darkblue;
+	border-color: black;
 }
 footer .btn:hover{
-	background-color: cornsilk;
-}
+	background-color: lightgray;
+} 
+.grid {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: 1fr 1fr 1fr 1fr;
+	gap: 0px 0px;
+	grid-auto-flow: row;
+	grid-template-areas:
+	  "photo1 photo1 photo2"
+	  "photo1 photo1 photo3"
+	  "photo4 photo6 photo6"
+	  "photo5 photo6 photo6";
+  }
+  .grid img{
+	  border-radius: 20px;
+  }
+  
+  .photo1 { grid-area: photo1;}
+  
+  .photo2 { grid-area: photo2;}
+  
+  .photo3 { grid-area: photo3;}
+  
+  .photo4 { grid-area: photo4;}
+  
+  .photo5 { grid-area: photo5;}
+  
+  .photo6 { grid-area: photo6;}
+  
