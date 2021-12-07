@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8" />
+    <title> </title>
+    <meta name="description" content="">
+
+    <!-- meta viewport : importante à inclure pour l'affichage sur les divers appareils -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="script.js"></script>
+</head>
+<header class="container">
+    <div class="flex">
+        <img src="img/logo-burger-shop.png">
+        <nav class="navigation-menu" id="navBouge">
+            <ul>
+                <li><a href="index.html">Menu</a></li>
+                <li><a href="reservation.html">Reservation</a></li>
+                <li><a href="resto.html">Restaurant</a></li>
+                <span>
+                    <li><a href="macommande.html">Ma Commande</a></li>
+                </span>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<body>
+    <div class="container">
+        <section>
+            <div class="formulaire">
+                <form method="GET" action="confirmation.html"> 
+                    <fieldset>
+
+                        <div>
+                            <label for="txtPrenom">Votre Prenom :<span>*</span></label>
+                            <input type="text" id="txtPrenom" name="txtPrenom" required>
+                        </div>
+                        <div>
+                            <label for="numTel">Votre Numero de Telephone : <span>*</span></label>
+                            <input placeholder="(000)(-000-0000" maxlength="14" type="tel" id="numTel" name="numTel" required>
+                        </div>
+                        <div>
+                            <label for="nbPersonnes">Nombre de personnes pour la reservation : <span>*</span></label>
+                            <input type="number" id="nbPersonnes" name="nbPersonnes" placeholder="1" required>
+                        </div>
+                        <div>
+                            <label for="dateReservation">Nombre de personnes pour la reservation :<span>*</span> </label>
+                            <input type="date" id="dateReservation" name="dateReservation" required>
+                        </div>
+                        
+                        <div>
+                            <p style="font-family: 'Franklin Gothic Medium',
+                            'Arial Narrow',
+                            Arial,
+                            sans-serif;">Choisir Empacelment Reservation:<span>*</span></p>
+                            <input id="salleAManger" type="radio" name="choixReserv" required>
+                            <label for="choixReserv" id="salleAManger">Salle a Manger</label><br>
+                            <input id="terrasse" type="radio" name="choixReserv" required>
+                            <label for="choixReserv" id="terrasse">Terrasse</label>
+                        </div>
+                        
+                        <div>
+                            <label for="heureReserv">Heure de reservation:<span>*</span></label>
+                            <select name="heureReserv" id="heureReserv">
+                                <option  value="12:00">12:00</option>
+                                <option  value="12:30">12:30</option>
+                                <option  value="13:00">13:00</option>
+                                <option  value="13:30">13:30</option>
+                                <option  value="17:00">17:00</option>
+                                <option  value="17:30">17:30</option>
+                                <option  value="18:00">18:00</option>
+                                <option  value="18:30">18:30</option>
+                                <option  value="19:00">19:00</option>
+                                <option  value="19:30">19:30</option>
+                                <option  value="20:00">20:00</option>
+                                <option  value="20:30">20:30</option>
+                                <option value="21:00">21:00</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="espaceComm" id="commentaire">Espace Commentaire</label><br>
+                            <input style="height: 5rem;" id="commentaire" type="text" name="espaceComm">
+                        </div>
+                        <div>
+                            <label for="email" id="email">Email : </label><br>
+                            <input id="email" type="email" name="email">
+                        </div> 
+                        <br>
+                        <div class="inscription">
+                            <input id="inscription" type="checkbox" name="inscription">
+                            <label for="inscription" id="inscription">S'inscire a l'infolettre</label><br>
+                        </div>
+                        <br>
+                        <div> 
+                             <input type="submit" class="btn" value="Soummettre">
+                        </div>
+                      
+                    </fieldset>
+                   
+                </form>
+            </div>
+        </section>
+    </div>
+</body>
+
+<footer>
+    <section class="footerinfo">
+        <div class="containerFooter">
+            <p>Burger Shop : 1660 Boul. de l'Entente, Quebec </p>
+            <a href="tel:418-123-4567" class="btn">
+                <p>418-123-4567</p>
+            </a>
+    </section>
+    </div>
+    <!---->
+    <section>
+
+        <span>
+            <p>Site realise par : <b>Mathieu Roy</b> | Dans le cadre du programme Techniques de l'informatique - Cegep
+                Garneau</p>
+        </span>
+    </section>
+</footer>
+
+</html>

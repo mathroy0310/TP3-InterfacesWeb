@@ -1,140 +1,254 @@
-
 /* Propriétés générales */
 
-* {box-sizing: border-box;}
+* {
+	box-sizing: border-box;
+}
 
-img {max-width: 100%;}
-p{
+@media (max-width:450px) {}
+
+@font-face {
+	font-family: Shippo;
+	src: url(ShipporiAntique-Regular.ttf);
+}
+
+@keyframes degrade-couleur {
+	0% {
+		border-color: blue;
+	}
+
+	30% {
+		border-color: var(--bluePale);
+	}
+
+	75% {
+		border-color: rgb(211, 250, 255);
+	}
+
+	100% {
+		border-color: blue;
+	}
+}
+
+:root {
+	--bleufonce: rgba(9, 9, 121, 1);
+	--bluePale: rgba(0, 212, 255, 1);
+}
+
+fieldset {
+	border-radius: 20px;
+
+}
+
+html {
+	scroll-behavior: smooth;
+	color: white;
+	background: rgb(2, 0, 36);
+	background: linear-gradient(180deg,
+			black 0%,
+			var(--bleufonce) 35%,
+			black 100%);
+}
+
+::-webkit-scrollbar {
+	background: rgba(9, 9, 121, 1);
+	max-height: 10vh;
+}
+
+::-webkit-scrollbar-thumb {
+	background: rgb(2, 0, 36);
+	background: linear-gradient(180deg, rgba(0, 212, 255, 1) 0%,
+			rgba(9, 9, 121, 1) 35%,
+			rgba(0, 212, 255, 1) 100%);
+	border-radius: 20rem;
+}
+
+img {
+	max-width: 100%;
+}
+
+p {
 	font-family: Arial, Helvetica, sans-serif;
 }
-h1{
+
+h1 {
 	text-transform: uppercase;
 	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-.btn{
+
+.btn {
+	font-family: Shippo;
+	box-shadow: 0px 8px 10px -5px blue;
 	padding: 0.5rem;
-	background-color: blue;
+	background-color: var(--bluePale);
 	color: whitesmoke;
 	text-decoration: none;
 	border-radius: 10px;
-	border:2px solid blue;
-	font-family:Verdana, Geneva, Tahoma, sans-serif
+	border: 2px solid blue;
+	transition: border-color 1s, background-color 2s ease-in-out;
 }
-.container{
+
+.container {
+	animation-name: degrade-couleur;
+	animation-duration: 10s;
+	animation-iteration-count: infinite;
 	padding: 2rem;
-	border: black solid 2px;
+	border: var(--bluePale) solid 5px;
 	max-width: 1200px;
+	box-shadow: -10px 0px 13px -7px black,
+		10px 50px 13px -7px black,
+		0px 50px 50px 15px rgba(0, 0, 0, 0);
 	width: 90%;
 	margin: 0 auto;
 	border-radius: 5px;
-	background-color: rgb(219, 241, 255);
+	background-image: linear-gradient(to bottom, rgb(0, 0, 80), darkblue, rgb(0, 0, 80));
+
 }
-header img{
+
+header img {
 	height: 18rem;
 	width: 200px;
 	margin-top: 2rem;
 }
+
 .flex {
 	display: flex;
-	justify-content:space-between ;
+	justify-content: space-between;
 }
-nav{
+
+.navigation-menu {
 	margin-top: 2rem;
 	width: 45rem;
 	height: 8rem;
 }
-nav ul{
-	display:flex;
+
+.navigation-menu ul {
+	display: flex;
 	list-style-type: none;
 	justify-content: space-around;
 }
 
-nav ul li{
+.navigation-menu ul li {
 	font-size: larger;
 }
-span li a{
-	background-color: blue;
-	color: white;
 
+span li a {
+	box-shadow: 0px 8px 10px -5px blue;
+	background-color: var(--bluePale);
+	color: whitesmoke;
+	text-decoration: none;
+	border-radius: 10px;
+	border: 2px solid blue;
+	transition: background-color 1s, border-color 1s ease-in-out;
 }
-li a{
+
+li a {
 	text-decoration: none;
 	font-size: larger;
-	padding: 0.5rem;
-	border:2px solid blue;
-	color: black;
-	border-radius: 10px;
-}
-li a:hover{
-	background-color: rgb(255, 255, 255);
-	border-color: black;
-}
-span li a:hover{
+	padding: 1rem;
+	border: 2px solid blue;
+	color: white;
+	font-weight: 700;
 	background-color: darkblue;
+	border-radius: 10px;
+	transition: background-color 1ms, border-color 1s ease-in-out;
 }
-figure img{
+
+li a:hover {
+	background-color: rgb(20, 20, 60);
+	border-color: white;
+}
+
+span li a:hover {
+	background-color: darkblue;
+	border-color: white;
+}
+
+figure img {
+	box-shadow: -10px 0px 13px -7px black,
+		10px 00px 13px -7px black;
 	width: 15rem;
+	border: var(--bluePale) solid 5px;
+	animation-name: degrade-couleur;
+	animation-duration: 10s;
+	animation-iteration-count: infinite;
 	height: 15rem;
 	border-radius: 10px;
+	transition: transform (500ms);
 }
-figcaption{
-	display:block;
+
+figure img:hover {
+	transform: scale(1.05);
+}
+
+figcaption {
+	display: block;
 	width: 15rem;
 	height: 5rem;
 	text-align: center;
 }
-figure{
+
+figure {
 	margin-block-start: 0;
-    margin-block-end: 0;
-    margin-inline-start: 0;
-    margin-inline-end: 0;
+	margin-block-end: 0;
+	margin-inline-start: 0;
+	margin-inline-end: 0;
 }
-.BurgersPremiereLigne{
-	display:flex;
-	justify-content:center;
-	
+
+.BurgersPremiereLigne {
+	display: flex;
+	justify-content: center;
+
 }
-.BurgersDeuxiemeLigne{
+
+.BurgersDeuxiemeLigne {
 	display: flex;
 	justify-content: center;
 	margin-top: 5rem;
 	padding-bottom: 3rem;
 }
-.beignesLigne{
+
+.beignesLigne {
 	display: flex;
 	justify-content: center;
 	padding-bottom: 6rem;
 }
-.tshirtBox{
-	background-color: grey;
+
+.tshirtBox {
+	box-shadow: -10px 0px 13px -7px black,
+		10px 00px 13px -7px black;
+	background-image: linear-gradient(to right, darkblue, black, black, black, darkblue);
 }
-.tshirtBox .container{
+
+.tshirtBox .container {
 	border: none;
-	background-color: grey;
+	background-image: linear-gradient(to right, rgba(255, 0, 0, 0), rgba(97, 0, 225, 0.692));
 }
-.containerTshirt{
+
+.containerTshirt {
 	content: "";
 	clear: both;
 	display: table;
 }
-.containerTshirt img{
+
+.containerTshirt img {
 	float: right;
 }
-.containerTshirt p{
+
+.containerTshirt p {
 	max-width: 30rem;
 }
 
-.textTshirt{
+.textTshirt {
 	display: flex;
 	justify-content: space-between;
 }
 
-footer span{
+footer span {
 	text-align: center;
 	font-size: large;
 }
 
-.containerFooter{
+.containerFooter {
 	padding: 2.5rem;
 	color: white;
 	font-size: 24px;
@@ -143,10 +257,14 @@ footer span{
 	max-width: 1200px;
 	margin: 0 auto;
 }
-.footerinfo{
-	background-color: rgb(52, 52, 52);
+
+.footerinfo {
+	box-shadow: -10px 0px 13px -7px black,
+		10px 00px 13px -7px black;
+	background-image: linear-gradient(to right, rgb(1, 1, 100), var(--bleufonce), var(--bleufonce), var(--bleufonce), rgb(1, 1, 100));
 }
-footer .btn{
+
+footer .btn {
 	background-color: white;
 	padding-right: 0.5rem;
 	padding-left: 0.5rem;
@@ -154,13 +272,17 @@ footer .btn{
 	text-decoration: none;
 
 }
-.btn:hover{
+
+.btn:hover {
 	background-color: darkblue;
-	border-color: black;
+	border-color: white;
 }
-footer .btn:hover{
+
+footer .btn:hover {
+
 	background-color: lightgray;
-} 
+}
+
 .grid {
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
@@ -168,24 +290,127 @@ footer .btn:hover{
 	gap: 0px 0px;
 	grid-auto-flow: row;
 	grid-template-areas:
-	  "photo1 photo1 photo2"
-	  "photo1 photo1 photo3"
-	  "photo4 photo6 photo6"
-	  "photo5 photo6 photo6";
+		"photo1 photo1 photo2"
+		"photo1 photo1 photo3"
+		"photo4 photo6 photo6"
+		"photo5 photo6 photo6";
+}
+
+.grid img {
+	border-radius: 20px;
+}
+
+.photo1 {
+	grid-area: photo1;
+}
+
+.photo2 {
+	grid-area: photo2;
+}
+
+.photo3 {
+	grid-area: photo3;
+}
+
+.photo4 {
+	grid-area: photo4;
+}
+
+.photo5 {
+	grid-area: photo5;
+}
+
+.photo6 {
+	grid-area: photo6;
+}
+
+
+.formulaire{
+	font-family: 'Franklin Gothic Medium',
+		'Arial Narrow',
+		Arial,
+		sans-serif;
+	display: flex;
+	justify-content: center;
+}
+
+.formulaire div {
+	margin: 1rem;
+}
+
+.confirmBox {
+	align-items: center;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+
+form span{
+	color: red;
+}
+select {
+  width: 100%;
+  padding: 16px 12px;
+  border: none;
+  border-radius: 4px;
+  background-color: #f1f1f1;
+}
+input{
+	width: 10rem;
+	transition: width 0.4s ease-in-out;
   }
-  .grid img{
-	  border-radius: 20px;
-  }
-  
-  .photo1 { grid-area: photo1;}
-  
-  .photo2 { grid-area: photo2;}
-  
-  .photo3 { grid-area: photo3;}
-  
-  .photo4 { grid-area: photo4;}
-  
-  .photo5 { grid-area: photo5;}
-  
-  .photo6 { grid-area: photo6;}
-  
+input[type=text]:focus {
+	border: 3px solid blue;
+	width: 15rem;
+}
+input[type=subit] .btn{
+	padding: 1210rem;
+	width: 200rem;
+}
+.inscription{
+	font-size: 20px;
+	color: #999;
+}
+
+.formulaire input[type=submit] {
+	padding: 1rem;
+}
+.macommande{
+	justify-content: space-between;
+	display: flex;
+}
+.burgeretbeigne{
+	width: 70vw;
+	border: blue solid 2px;
+}
+
+.burger{
+	margin: 2rem;
+}
+.burgeretbeigne img{
+	float: left;
+}
+.burgeretbeigne h2{
+	margin-left: 2rem;
+}
+.burgeretbeigne span{
+	margin: 30%;
+}
+.burgeretbeigne p{
+	padding: 1rem 0;
+	border-bottom: blue solid 2px;
+}
+.beignes{
+	margin: 2rem;
+}
+.details{
+	width: 30vw;
+	padding:1rem 5rem;
+	border: blue solid 2px;
+}
+.details .total{
+	border-top: blue solid 2px;
+}
+.details span{
+	margin: 50%;
+}
