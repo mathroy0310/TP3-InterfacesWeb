@@ -3,8 +3,52 @@
 * {
 	box-sizing: border-box;
 }
+@media (max-width:960px) {
+	figure{
+		transform: scale(0.75);
+	}
+	.container{
+		font-size: 20px;
+	}
+	.beignesLigne{
+		display: flex;
+		width: calc(40vw+2rem/2);
+		margin: 0 auto;
+		flex-wrap: wrap;
+		justify-content: space-around;
+	}
+	.footerinfo a{
+		transform: scale(0.75);
+	}
+	.BurgersPremiereLigne{
+		
+		flex-wrap: wrap;
+	}
+	.BurgersDeuxiemeLigne{
+		visibility: hidden;
+		position: absolute;
+		top:10rem;
+		left:15rem;
+		pointer-events: none;
+	}
+	.hidden{
+		visibility: visible;
+	}
+	.navigation-menu{
+		visibility: hidden;
+		pointer-events: none;
+	}
+	.icon-menu{
+		visibility: visible;
+	}
+}
+@media (min-width:961px){
+	.hidden{
+		visibility: hidden;
+	}
+	
+}
 
-@media (max-width:450px) {}
 
 @font-face {
 	font-family: Shippo;
@@ -193,18 +237,15 @@ figure {
 	margin-inline-start: 0;
 	margin-inline-end: 0;
 }
-
 .BurgersPremiereLigne {
 	display: flex;
 	justify-content: center;
-
 }
 
 .BurgersDeuxiemeLigne {
 	display: flex;
 	justify-content: center;
-	margin-top: 5rem;
-	padding-bottom: 3rem;
+	margin: 5rem 0;
 }
 
 .beignesLigne {
@@ -425,3 +466,25 @@ input[type=subit] .btn{
 	display: inline-flex;
 	justify-content: space-between;
 }
+
+.icon-menu{
+	position: absolute;
+	top: 8vh;
+	right: 8vw;
+}
+.icon-menu .button{
+	display: inline-block;
+	cursor: pointer;
+	border:none;
+	position: absolute;
+	top: 8vh;
+	right: 8vw;
+	width: 75px;
+	height: 75px;
+}
+.icon-menu img{
+	position: absolute;
+	top: 8vh;
+	right: 8vw;
+}
+
